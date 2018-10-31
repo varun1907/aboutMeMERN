@@ -1,0 +1,185 @@
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#root{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.divStyle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.introSection{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color:#EF2F4F;
+}
+.variableSection{
+  flex: 1;
+  justify-content: center;
+  background-color:#FFB818;
+}
+.imgStyle{
+ width: 100%;
+ height:450px;
+ width:450px;
+ background-size: cover;
+ border-radius:50%;
+ flex-wrap:nowrap;
+}
+.intro{
+  color:white;
+  font-size:100px;
+}
+.wrapStyle{
+  flex-direction:row;
+  display:flex;
+  height:100vh;
+  width:100vw;
+}
+.skillWrapper{
+  flex-direction:row;
+  display:flex;
+  height:100vh;
+  width:100vw;
+}
+.skillsCard{
+  width:400px;
+  height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.contactWrapper{
+  flex-direction:row;
+  display:flex;
+  height:100vh;
+  width:100vw;
+}
+.projectContainer{
+  position:relative;
+  margin-top:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.projectCategory{
+  height:50px;
+  width:250px;
+  z-index:100;
+  position:absolute;
+  top:-10px;
+  margin-left:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+ul  {
+  list-style: none;
+  font-size: 20px;
+  line-height: 50px;
+}
+a:link {
+  text-decoration: none;
+  color:white;
+}
+
+a:visited {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+  text-decoration: none;
+  color:white;
+}
+
+a:active {
+  text-decoration: none;
+  color:white;
+}
+.projectListContainer{
+  background-color:pink;
+  padding-top:25px;
+  width:290px;
+  margin-top: 20px;
+  margin-left:30px;
+  
+}
+
+.stackUsed{
+  background-color: rgb(51, 51, 51);
+  border-radius: 10px;
+  display: inline-block;
+  color:white;
+  height:auto;
+  margin-left: 10px;
+  width: fit-content;
+}
+.stackUsed p {
+  padding:10px;
+}
+@media only screen and (max-width: 768px) {
+
+.imgStyle{
+  height:120px;
+ width:120px;
+}
+.intro{
+  font-size: 20px;
+}
+.introSection{
+  width: auto;
+  height: fit-content;
+}
+.variableSection{
+  height: fit-content;
+}
+.wrapStyle{
+  height:fit-content;
+  flex-direction:column;
+}
+.skillWrapper{
+  height:fit-content;
+  flex-direction:column;
+  justify-content: center;
+}
+.skillsCard{
+  width:80vw;
+  height:auto;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+.skillsCardWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactWrapper{
+  flex-direction: column;
+  height: 100%;
+}
+.map{
+  display: none;
+}
+.buttonClass{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 25px;
+}
+.buttonWidth{
+  width: 200px;
+}
+.stackUsed{
+  margin:7px;
+}
+}
