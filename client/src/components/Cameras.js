@@ -16,7 +16,7 @@ class Cameras extends Component {
     render() {
         return (
              <div className="App">
-      
+        <p>Hey there trying to access camera</p>
         <Camera
           style={style.preview}
           ref={(cam) => {
