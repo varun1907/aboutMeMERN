@@ -27,7 +27,7 @@ class Cameras extends Component {
         return (
              <div className="App">
         <p>Hey there trying to access camera</p>
-        <input type="image" accept="image/*" capture="environment"/>
+        <input type="image" accept="image/*" capture="true"/>
         {/* <Camera
           onTakePhoto = { (dataUri) => { this.onTakePhoto(dataUri); } }
           onCameraError = { (error) => { this.onCameraError(error); } }
