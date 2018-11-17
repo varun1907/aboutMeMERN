@@ -6,6 +6,26 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 class Cameras extends Component {
 
+  constructor (props, context) {
+    super(props, context);
+    this.state = {
+      idealFacingMode: FACING_MODES.ENVIRONMENT
+    };
+    this.renderButtons = this.renderButtons.bind(this);
+  }
+  renderButtons () {
+    return (
+      <div>
+        <button onClick={ (e) => {
+          this.setState({idealFacingMode: FACING_MODES.USER});
+        }}> FACING_MODES.USER </button>
+
+        <button onClick={ (e) => {
+          this.setState({idealFacingMode: FACING_MODES.ENVIRONMENT});
+        }}> FACING_MODES.ENVIRONMENT </button>
+      </div>
+    );
+  }
   // onTakePhoto (dataUri) {
   //   // Do stuff with the photo...
   //   console.log('takePhoto');
@@ -28,6 +48,7 @@ class Cameras extends Component {
              <div className="App">
         <p>Hey there trying to access camera</p>
         <input type="image" accept="image/*" capture="true"/>
+        { this.renderButtons() }
         {/* <Camera
           onTakePhoto = { (dataUri) => { this.onTakePhoto(dataUri); } }
           onCameraError = { (error) => { this.onCameraError(error); } }
@@ -42,6 +63,10 @@ class Cameras extends Component {
           onCameraStart = { (stream) => { this.onCameraStart(stream); } }
           onCameraStop = { () => { this.onCameraStop(); } }
         /> */}
+         <Camera
+          idealFacingMode = {this.state.idealFacingMode}
+          onTakePhoto = { () => {} }
+          />
       </div>
         );
     }
