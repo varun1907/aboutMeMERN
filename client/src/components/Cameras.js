@@ -6,28 +6,29 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 class Cameras extends Component {
 
-  onTakePhoto (dataUri) {
-    // Do stuff with the photo...
-    console.log('takePhoto');
-  }
+  // onTakePhoto (dataUri) {
+  //   // Do stuff with the photo...
+  //   console.log('takePhoto');
+  // }
 
-  onCameraError (error) {
-    console.error('onCameraError', error);
-  }
+  // onCameraError (error) {
+  //   console.error('onCameraError', error);
+  // }
 
-  onCameraStart (stream) {
-    console.log('onCameraStart');
-  }
+  // onCameraStart (stream) {
+  //   console.log('onCameraStart');
+  // }
 
-  onCameraStop () {
-    console.log('onCameraStop');
-  }
+  // onCameraStop () {
+  //   console.log('onCameraStop');
+  // }
 
     render() {
         return (
              <div className="App">
         <p>Hey there trying to access camera</p>
-        <Camera
+        <input type="image" accept="image/*" capture="environment"/>
+        {/* <Camera
           onTakePhoto = { (dataUri) => { this.onTakePhoto(dataUri); } }
           onCameraError = { (error) => { this.onCameraError(error); } }
           idealFacingMode = {FACING_MODES.ENVIRONMENT}
@@ -40,7 +41,7 @@ class Cameras extends Component {
           sizeFactor = {1}
           onCameraStart = { (stream) => { this.onCameraStart(stream); } }
           onCameraStop = { () => { this.onCameraStop(); } }
-        />
+        /> */}
       </div>
         );
     }
