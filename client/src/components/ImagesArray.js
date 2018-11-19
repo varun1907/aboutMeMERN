@@ -94,11 +94,34 @@
       caption: 'Slide 2'
     }
   ];
+  const sureFitItems = [
+    {
+      src: require('../images/SureFit/SureFit-1.png'),
+      caption: 'Slide 1'
+    },
+    {
+      src: require('../images/SureFit/SureFit-2.png'),
+      caption: 'Slide 1'
+    },
+    {
+      src: require('../images/SureFit/SureFit-3.png'),
+      caption: 'Slide 1'
+    },
+    {
+      src: require('../images/SureFit/SureFit-4.png'),
+      caption: 'Slide 1'
+    },
+    {
+      src: require('../images/SureFit/SureFit-5.png'),
+      caption: 'Slide 1'
+    },
+  ]
 
   module.exports = {
       nexusItems: nexusItems,
       bunkPollItems: bunkPollItems,
       portfolioDjangoItems:portfolioDjangoItems,
-      dataAnalysisItems:dataAnalysisItems
+      dataAnalysisItems:dataAnalysisItems,
+      sureFitItems: sureFitItems
 
   };

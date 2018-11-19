@@ -40,12 +40,13 @@ export default class Projects extends Component {
           </div>
           <div style={{backgroundColor:'#ba68c8'}} className="projectListContainer" >
             <ul>
+              <li><NavLink to="/projects/surefit" target="_blank" href="#">Surefit</NavLink></li>
               <li><NavLink to="/projects/portfolio" target="_blank" href="#">Portfolio</NavLink></li>
             </ul>
           </div>
           </div>
 
-          <div className="projectContainer">
+          <div className="projectContainer" style={{marginBottom:10}}>
           <div style={{backgroundColor:'rgb(51, 51, 51)'}} className="projectCategory">
              <p style={{color:'white'}}>Data Analysis</p>
           </div>
