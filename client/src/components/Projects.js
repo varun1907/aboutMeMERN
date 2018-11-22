@@ -40,7 +40,7 @@ export default class Projects extends Component {
           </div>
           <div style={{backgroundColor:'#ba68c8'}} className="projectListContainer" >
             <ul>
-              {/* <li><NavLink to="/projects/surefit" target="_blank" href="#">Surefit</NavLink></li> */}
+              <li><NavLink to="/projects/surefit" target="_blank" href="#">Surefit</NavLink></li>
               <li><NavLink to="/projects/portfolio" target="_blank" href="#">Portfolio</NavLink></li>
             </ul>
           </div>
