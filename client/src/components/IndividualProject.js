@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, Button } from 'reactstrap';
-import { nexusItems, bunkPollItems, portfolioDjangoItems, dataAnalysisItems, sureFitItems } from './ImagesArray.js'
+import { nexusItems, bunkPollItems, portfolioDjangoItems, dataAnalysisItems, sureFitItems, covid19Items } from './ImagesArray.js'
 import './Projects.css';
 import Footer from './Footer.js';
 
@@ -14,7 +14,8 @@ export default class IndividualProject extends Component {
       activeIndexBunkPoll: 0,
       activeIndexDataAnalysis: 0,
       activeIndexPortfolioDjango: 0,
-      activeIndexSureFit: 0
+      activeIndexSureFit: 0,
+      activeIndexCovid: 0
     };
     this.nextNexus = this.nextNexus.bind(this);
     this.previousNexus = this.previousNexus.bind(this);
@@ -223,6 +224,17 @@ export default class IndividualProject extends Component {
         </CarouselItem>
       );
     });
+    const covidSlides = covid19Items.map((item) => {
+      return (
+        <CarouselItem
+          // onExiting={this.onExitingSureFit}
+          // onExited={this.onExitedSureFit}
+          key={item.src}
+        >
+          <img className="data" src={item.src} />
+        </CarouselItem>
+      );
+    });
     if (this.props.match.params.id === 'nexus') {
       return (
         <div className="container">
@@ -267,7 +279,7 @@ export default class IndividualProject extends Component {
                 <p style={{ paddingLeft: 10 }}>So basically this is the whole idea behind this app.</p>
               </div>
               <div style={{ textAlign: 'center', marginBottom: 10 }}>
-                <Button color="success" size="lg">Github Repository</Button>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/Nexus','_blank')}} size="lg">Github Repository</Button>
               </div>
             </div>
           </div>
@@ -305,7 +317,7 @@ export default class IndividualProject extends Component {
           </p>
               </div>
               <div style={{ textAlign: 'center', marginBottom: 10 }}>
-                <Button color="success" size="lg">Github Repository</Button>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/Bunk-Poll','_blank')}} size="lg">Github Repository</Button>
               </div>
             </div>
           </div>
@@ -353,7 +365,7 @@ export default class IndividualProject extends Component {
                 </p>
               </div>
               <div style={{ textAlign: 'center', marginBottom: 10 }}>
-                <Button color="success" size="lg">Github Repository</Button>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/kaggleFifaDataAnalysis','_blank')}} size="lg">Github Repository</Button>
               </div>
             </div>
           </div>
@@ -394,7 +406,7 @@ export default class IndividualProject extends Component {
         </p>
               </div>
               <div style={{ textAlign: 'center', marginBottom: 10 }}>
-                <Button color="success" size="lg">Github Repository</Button>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/aboutmeWebsite','_blank')}} size="lg">Github Repository</Button>
               </div>
             </div>
           </div>
@@ -418,30 +430,6 @@ export default class IndividualProject extends Component {
               <div className="stackUsed"><p style={{ margin: 'auto' }}>SQLITE</p></div>
               <div className="stackUsed"><p style={{ margin: 'auto' }}>REACT NATIVE ELEMENTS</p></div>
 
-
-            </div>
-            <div className="divStyle">
-              <h1 style={{ paddingTop: 15, paddingBottom: 15 }}>Coming Soon...!!</h1>
-            </div>
-
-          </div>
-          <div className="divStyle" style={{ marginBottom: 30 }}>
-            <Footer color="#EF2F4F" />
-          </div>
-        </div>
-      );
-    } else if (this.props.match.params.id === 'rentpe') {
-      return (
-        <div className="container">
-          <h1 style={{ textAlign: 'center', paddingTop: 15 }}>Rentpe</h1>
-          <div>
-            <div style={{ textAlign: 'center', marginBottom: 25, paddingTop: 20 }}>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>REACT NATIVE</p></div>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>REDUX</p></div>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>PHP</p></div>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>REST API</p></div>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>MYSQL</p></div>
-              <div className="stackUsed"><p style={{ margin: 'auto' }}>REACT NATIVE ELEMENTS</p></div>
 
             </div>
             <div className="divStyle">
@@ -492,7 +480,54 @@ export default class IndividualProject extends Component {
           </p>
               </div>
               <div style={{ textAlign: 'center', marginBottom: 10 }}>
-                <Button color="success" size="lg">Github Repository</Button>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/surefit','_blank')}}  size="lg">Github Repository</Button>
+              </div>
+            </div>
+          </div>
+          <div className="divStyle" style={{ marginBottom: 30 }}>
+            <Footer color="#EF2F4F" />
+          </div>
+        </div>
+
+      );
+    }else if (this.props.match.params.id === 'covid19tracker') {
+      return (
+        <div className="container">
+          <h2 style={{ textAlign: 'center', paddingTop: 15 }}>Covid19Tracker</h2>
+          <div className="m">
+            <Carousel className="data"
+              activeIndex={this.state.activeIndexCovid}
+              // next={this.nextSureFit}
+              // previous={this.previousSureFit}
+            >
+              <CarouselIndicators 
+                items={covid19Items} 
+                activeIndex={this.state.activeIndexCovid} 
+                // onClickHandler={this.goToSureFitIndex} 
+              />
+              {covidSlides}
+              {/* <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousSureFit} />
+              <CarouselControl direction="next" directionText="Next" onClickHandler={this.nextSureFit} /> */}
+            </Carousel>
+            <div>
+              <div style={{ textAlign: 'center', marginBottom: 25, paddingTop: 20 }}>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>REACT JS</p></div>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>Material UI</p></div>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>Firebase</p></div>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>Chart js</p></div>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>Leaflet</p></div>
+                <div className="stackUsed"><p style={{ margin: 'auto' }}>CSS</p></div>
+
+              </div>
+              <div className="description">
+
+                <p style={{ paddingLeft: 10 }}>
+                  This project is build using react hooks, functional components, material-ui and leaflet for maps.
+                  It shows the visuals of covid19 pandemic all around the world.You can select any country and its data will be shown in form of total cases, deaths and recovery. This data is used from a thrid party public API from disease.sh.It also shows the daily increament in cases in the form of graph.Do checkout it on <span><a href="https://covid19tracker-188c1.web.app/" style={{color:'#007bff'}} target="_blank">https://covid19tracker-188c1.web.app/</a></span>
+          </p>
+              </div>
+              <div style={{ textAlign: 'center', marginBottom: 10 }}>
+                <Button color="success" onClick={() => {window.open('https://github.com/varun1907/covid19tracker','_blank')}} size="lg">Github Repository</Button>
               </div>
             </div>
           </div>

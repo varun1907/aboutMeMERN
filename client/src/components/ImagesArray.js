@@ -117,11 +117,20 @@
     },
   ]
 
+  const covid19Items = [
+    {
+      src: require('../images/covid19Tracker/Covid19-1.png'),
+      caption: 'Slide 1'
+    },
+  ]
+
+
   module.exports = {
       nexusItems: nexusItems,
       bunkPollItems: bunkPollItems,
       portfolioDjangoItems:portfolioDjangoItems,
       dataAnalysisItems:dataAnalysisItems,
-      sureFitItems: sureFitItems
+      sureFitItems: sureFitItems,
+      covid19Items: covid19Items,
 
   };

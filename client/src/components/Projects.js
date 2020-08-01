@@ -27,9 +27,7 @@ export default class Projects extends Component {
             <ul>
               <li><NavLink to="/projects/nexus" target="_blank" href="#">Nexus</NavLink></li>
               <li><NavLink to="/projects/projectXApp" target="_blank" href="#">ProjectXApp</NavLink></li>
-              <li><NavLink to="/projects/rentpe" target="_blank" href="#">Rentpe</NavLink></li>
               <li><NavLink to="/projects/bunkPoll" target="_blank" href="#">Bunk Poll</NavLink></li>
-
             </ul>
           </div>
           </div>
@@ -40,6 +38,7 @@ export default class Projects extends Component {
           </div>
           <div style={{backgroundColor:'#ba68c8'}} className="projectListContainer" >
             <ul>
+              <li><NavLink to="/projects/covid19tracker" target="_blank" href="#">Covid 19 Tracker</NavLink></li>
               <li><NavLink to="/projects/surefit" target="_blank" href="#">Surefit</NavLink></li>
               <li><NavLink to="/projects/portfolio" target="_blank" href="#">Portfolio</NavLink></li>
             </ul>
