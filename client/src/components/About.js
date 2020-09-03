@@ -18,7 +18,10 @@ export default class About extends Component {
         </div>
         <div style={{paddingLeft:30,marginTop:20}}>
         <p style={{color:'white',fontSize:20}}>
-        Hi,I am persuing Btech in Computer Science and Engineering from Graphic Era University Dehradun. I specialize in building React Native applications .
+        Hi,I am working as an Associate Software Programmer at 10times.
+        </p>
+        <p style={{color:'white',fontSize:20}}>
+        I did my Btech in Computer Science and Engineering from Graphic Era University Dehradun. I specialize in building React Native applications .
         </p>
         <p style={{color:'white',fontSize:20}}>I have done work in , mobile app development, front-end/back-end web, database management, REST api and
         MERN Stack.
